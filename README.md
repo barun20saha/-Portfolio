@@ -33,6 +33,7 @@
 | **Styling**       | Tailwind CSS v4, @tailwindcss/postcss                     |
 | **Animations**    | Motion (Framer Motion v12)                                |
 | **Forms**         | React Hook Form, Zod v4, @hookform/resolvers              |
+| **UI Primitives** | shadcn/ui, Radix UI                                       |
 | **Backend**       | Appwrite, node-appwrite (server-side)                     |
 | **Markdown**      | react-markdown, remark-gfm, rehype-highlight, gray-matter |
 | **Icons**         | Lucide React, Custom SVG components, Tabler Icons         |
@@ -92,6 +93,12 @@ This project is optimized for deployment on [Vercel](https://vercel.com).
 2. Import the repository in Vercel.
 3. Add your environment variables in the Vercel dashboard.
 4. Deploy!
+
+---
+
+## 👏 Acknowledgments
+
+- **[shadcn/ui](https://ui.shadcn.com/)** — For providing the excellent, customizable UI primitives that power the components of this portfolio.
 
 ---
 
