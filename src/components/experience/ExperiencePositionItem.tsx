@@ -32,8 +32,7 @@ export function ExperiencePositionItem({ position }: { position: ExperiencePosit
       className="group/experience-position relative"
       data-open={isOpen ? '' : undefined}
     >
-      {/* Bottom connecting timeline bit */}
-      <div className="bg-border pointer-events-none absolute bottom-0 left-3 hidden h-px w-3 group-last/experience-position:flex" />
+
 
       {/* Accordion Trigger */}
       <button
