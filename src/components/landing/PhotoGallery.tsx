@@ -26,7 +26,7 @@ const memories = [
     id: 4,
     title: 'College Fest',
     img: '/gallery/4.png',
-    position: 'object-top',
+    position: 'object-[50%_40%]',
   },
 ];
 
