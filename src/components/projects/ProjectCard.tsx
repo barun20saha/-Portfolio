@@ -46,7 +46,7 @@ const ProjectCard = ({
                         className="flex flex-1 flex-col gap-1 text-left hover:no-underline"
                       >
                         {/* Project Image */}
-                        <div className="h-52 w-full overflow-hidden rounded-lg bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center border border-neutral-200 dark:border-neutral-700 relative">
+                        <div className="h-52 w-full overflow-hidden rounded-lg relative flex items-center justify-center">
                           {items.img && items.img.src ? (
                             <Image
                               src={items.img.src}
@@ -55,7 +55,21 @@ const ProjectCard = ({
                               className="object-cover transition-transform duration-500 group-hover/card:scale-105"
                             />
                           ) : (
-                            <span className="text-neutral-400 dark:text-neutral-500 text-sm font-medium">No Image</span>
+                            <div className="absolute inset-0 bg-gradient-to-br from-emerald-200 via-green-50 to-orange-100 dark:from-emerald-900/60 dark:via-[#0a1f16] dark:to-amber-900/30 flex items-end justify-center px-4 pt-6">
+                              {/* Inner Black Card Placeholder */}
+                              <div className="w-full h-full bg-[#0a0a0a] rounded-t-xl shadow-2xl border border-white/10 border-b-0 relative overflow-hidden flex flex-col items-center justify-center transition-transform duration-500 group-hover/card:translate-y-[-4px]">
+                                {/* Subtle inner top highlight */}
+                                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                                <div className="absolute inset-0 bg-gradient-to-b from-white/[0.03] to-transparent"></div>
+                                
+                                <div className="flex flex-col items-center gap-2 opacity-40">
+                                  <div className="w-8 h-8 rounded-lg border border-white/10 flex items-center justify-center">
+                                    <span className="text-white/60 text-xs font-medium">UI</span>
+                                  </div>
+                                  <span className="text-white/40 text-[10px] font-medium tracking-widest uppercase">Placeholder</span>
+                                </div>
+                              </div>
+                            </div>
                           )}
                         </div>
 
