@@ -1,5 +1,8 @@
 import SendIcon from '@/components/icons/social/SendIcon';
 import Cv from '@/components/icons/social/Cv';
+import Github from '@/components/icons/social/Github';
+import LinkedIn from '@/components/icons/social/LinkedIn';
+import Mail from '@/components/icons/social/Mail';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -23,19 +26,19 @@ const SocialLinks = () => {
       name: 'GitHub',
       href: 'https://github.com/barun20saha',
       isExternal: true,
-      icon: '/images/github.png',
+      icon: <Github />,
     },
     {
       name: 'LinkedIn',
       href: 'https://www.linkedin.com/in/barun-saha-132312380/',
       isExternal: true,
-      icon: '/images/linkedin.png',
+      icon: <LinkedIn />,
     },
     {
       name: 'Email',
       href: 'mailto:barun20.saha@gmail.com',
       isExternal: true,
-      icon: '/images/gmail.png',
+      icon: <Mail />,
     },
   ];
 

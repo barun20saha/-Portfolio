@@ -9,6 +9,7 @@ import {
 } from '@/lib/techIcons';
 import RepeatSeparator from '../ui/repeat-separator';
 import { BrainCircuit, Network, ScanEye, Database, BarChart, Lightbulb, Globe } from 'lucide-react';
+import TensorFlowIcon from '@/components/icons/tech/TensorFlow';
 
 const TechSkills = () => {
   return (
@@ -133,7 +134,7 @@ const StackCategories = [
       },
       {
         title: 'TensorFlow',
-        icon: <LLM />,
+        icon: <TensorFlowIcon />,
         href: 'https://www.tensorflow.org/',
       },
       {

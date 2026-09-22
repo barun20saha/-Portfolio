@@ -12,7 +12,7 @@ const Featured = () => {
       <RepeatSeparator />
       <SectionHeading heading={'GitHub Activity'} />
       <Container>
-        <div className="px-5 py-2">
+        <div className="px-5 py-2 mt-6">
           <GitHubActivity
             username="barun20saha"
             showMonths={true}

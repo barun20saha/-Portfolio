@@ -7,7 +7,7 @@ const ExperienceCardData: Experience[] = [
   {
     id: "adamas-university",
     companyName: "Adamas University",
-    companyLogo: "/adamas.png",
+    companyLogo: "/logo/adamas_logo.png",
     companyWebsite: "https://adamasuniversity.ac.in",
     isCurrentEmployer: true,
     positions: [
@@ -36,7 +36,7 @@ const ExperienceCardData: Experience[] = [
   {
     id: "ieee-cis",
     companyName: "IEEE CIS",
-    companyLogo: "/ieee.png",
+    companyLogo: "/logo/ieee_logo.png",
     companyWebsite: "#",
     isCurrentEmployer: false,
     positions: [
