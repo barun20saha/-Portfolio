@@ -10,6 +10,9 @@ import {
 import RepeatSeparator from '../ui/repeat-separator';
 import { BrainCircuit, Network, ScanEye, Database, BarChart, Lightbulb, Globe } from 'lucide-react';
 import TensorFlowIcon from '@/components/icons/tech/TensorFlow';
+import Java from '@/components/icons/tech/Java';
+import CLang from '@/components/icons/tech/CLang';
+import Cpp from '@/components/icons/tech/Cpp';
 
 const TechSkills = () => {
   return (
@@ -77,17 +80,17 @@ const StackCategories = [
       },
       {
         title: 'Java',
-        icon: <div className="size-2 rounded-full bg-neutral-400"></div>,
+        icon: <Java />,
         href: '#',
       },
       {
         title: 'C',
-        icon: <div className="size-2 rounded-full bg-neutral-400"></div>,
+        icon: <CLang />,
         href: '#',
       },
       {
         title: 'C++',
-        icon: <div className="size-2 rounded-full bg-neutral-400"></div>,
+        icon: <Cpp />,
         href: '#',
       },
       {

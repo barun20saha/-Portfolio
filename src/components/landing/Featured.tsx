@@ -17,6 +17,7 @@ const Featured = () => {
             username="barun20saha"
             showMonths={true}
             defaultOpen={false}
+            repos={[]}
           />
         </div>
       </Container>

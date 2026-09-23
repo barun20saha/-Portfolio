@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 const DEFAULT_ACCENT = "#39d353";
 const DEFAULT_CELL_SIZE = 11;
-const DEFAULT_LABEL = "Top contributions in:";
+const DEFAULT_LABEL = "";
 const DEFAULT_MONTHS = 12;
 const WEEKS_PER_MONTH = 365.25 / 12 / 7;
 const STACK_LIMIT = 3;
@@ -521,7 +521,6 @@ const GitHubActivity = ({
       data-slot="github-activity"
       className={cn(
         "relative max-w-full text-neutral-900 dark:text-white",
-        repos.length > 0 && "pb-[76px]",
         className
       )}
       style={{ width, ...style }}
@@ -534,72 +533,6 @@ const GitHubActivity = ({
         showMonths={showMonths}
         label={heading}
         reduceMotion={reduceMotion} />
-
-      {repos.length > 0 && (
-        <motion.div
-          layout
-          id={`${uid}-panel`}
-          data-slot="github-activity-panel"
-          data-state={open ? "open" : "closed"}
-          className={cn(
-            "absolute inset-x-3 bottom-3 overflow-hidden border border-black/5 bg-neutral-100/90 backdrop-blur-xl dark:border-white/10 dark:bg-neutral-900/90",
-            open && "top-3"
-          )}
-          style={{ borderRadius: 18 }}
-          transition={transition}>
-          <motion.div
-            layout="position"
-            transition={headerTransition}
-            className="flex items-center justify-between gap-3 px-4 py-3">
-            <span className="truncate text-sm font-medium text-neutral-700 dark:text-neutral-300">{label}</span>
-
-            <div className="flex items-center gap-3">
-              {!open && (
-                <div className="flex items-center">
-                  {repos.slice(0, STACK_LIMIT).map((repo, index) => (
-                    <Avatar
-                      key={index}
-                      repo={repo}
-                      layoutId={`${uid}-${index}`}
-                      transition={transition}
-                      index={index}
-                      className="-ml-2 first:ml-0" />
-                  ))}
-                </div>
-              )}
-
-              <button
-                type="button"
-                onClick={toggle}
-                aria-expanded={open}
-                aria-controls={`${uid}-panel`}
-                aria-label={
-                  open ? "Hide top repositories" : "Show top repositories"
-                }
-                className="grid size-7 shrink-0 place-items-center rounded-full bg-neutral-200/80 text-neutral-700  dark:bg-neutral-800 dark:text-neutral-300 cursor-pointer">
-                <Chevron open={open} transition={transition} />
-              </button>
-            </div>
-          </motion.div>
-
-          <AnimatePresence initial={false} mode="popLayout">
-            {open && (
-              <motion.ul
-                key="list"
-                layout="position"
-                {...listMotion}
-                transition={rowTransition}
-                className="px-0.5 pb-1">
-                {repos.map((repo, index) => (
-                  <li key={index}>
-                    <RepoRow repo={repo} layoutId={`${uid}-${index}`} transition={transition} index={index} />
-                  </li>
-                ))}
-              </motion.ul>
-            )}
-          </AnimatePresence>
-        </motion.div>
-      )}
     </div>
   );
 };

@@ -56,28 +56,7 @@ const Projects = ({ projects = [] }: { projects?: ProjectItem[] }) => {
           </h1>
         </div>
         
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 md:px-4">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="m12 19-7-7 7-7" />
-              <path d="M19 12H5" />
-            </svg>
-            Back to Home
-          </Link>
-          
+        <div className="flex flex-col sm:flex-row sm:items-center justify-end gap-4 md:px-4">
           <div className="relative w-full sm:w-64">
             <svg
               className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"
