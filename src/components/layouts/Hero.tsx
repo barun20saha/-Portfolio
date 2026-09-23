@@ -18,7 +18,6 @@ const titles = [
 const Hero = () => {
   const [index, setIndex] = useState(0);
   const [currentTime, setCurrentTime] = useState('');
-  const [showVisits, setShowVisits] = useState(false);
   const MOCK_VISITS = 699;
 
   useEffect(() => {
@@ -56,39 +55,13 @@ const Hero = () => {
   return (
     <Container className={`relative flex flex-col items-start justify-center pt-6 md:pt-8`}>
       {/* Visitor counter — top-right corner */}
-      <button
-        onClick={() => setShowVisits((v) => !v)}
-        aria-label={showVisits ? 'Hide visit count' : 'Show visit count'}
-        className="absolute top-4 right-4 flex items-center gap-2 text-sm font-medium text-neutral-400 hover:text-neutral-700 dark:text-neutral-500 dark:hover:text-neutral-300 transition-colors cursor-pointer select-none group"
-      >
-        <AnimatePresence mode="wait">
-          {showVisits ? (
-            <motion.span
-              key="count"
-              initial={{ opacity: 0, x: 8 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 8 }}
-              transition={{ duration: 0.2 }}
-              className="tabular-nums"
-            >
-              {MOCK_VISITS.toLocaleString()}
-            </motion.span>
-          ) : null}
-        </AnimatePresence>
-        {showVisits ? (
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:scale-110">
-            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
-            <circle cx="12" cy="12" r="3"/>
-          </svg>
-        ) : (
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:scale-110">
-            <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/>
-            <path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/>
-            <path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/>
-            <line x1="2" x2="22" y1="2" y2="22"/>
-          </svg>
-        )}
-      </button>
+      <span className="absolute top-4 right-4 flex items-center gap-1.5 text-sm text-neutral-400 dark:text-neutral-500 select-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+        <span className="tabular-nums">{MOCK_VISITS.toLocaleString()}</span>
+      </span>
 
       <div className="flex h-full w-full flex-col sm:flex-row px-4 md:px-5">
         <div className="mb-4 sm:mb-0 sm:mr-6">

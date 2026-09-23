@@ -12,7 +12,9 @@ import ReactIcon from '@/components/icons/tech/ReactIcon';
 import TypeScript from '@/components/icons/tech/TypeScript';
 import { Badge } from '@/components/ui/badge';
 import { Python } from '@/components/icons/tech/Python';
+import Java from '@/components/icons/tech/Java';
 import { Brain, Database, ChartBar } from 'lucide-react';
+
 
 // Technology mapping
 const TechnologyComponents: Record<string, React.ElementType> = {
@@ -37,6 +39,10 @@ const TechnologyComponents: Record<string, React.ElementType> = {
   bun: Bun,
   Python: Python,
   python: Python,
+  Java: Java,
+  java: Java,
+  'Spring Boot': Java,
+  'spring boot': Java,
   AI: Brain,
   ai: Brain,
   'Data Science': ChartBar,
